@@ -50,6 +50,10 @@ def count_and_print(items)
   end
 end
 
+def chars_in_string(string)
+  string.split("")
+end
+
 # "p" prints something to the screen in a way that's friendlier
 # for debugging purposes than print or puts.
 
@@ -60,12 +64,10 @@ p item_counts(["hi", "hi", "hi"]) == {"hi" => 3}
 p item_counts([true, nil, "dinosaur"]) == {true => 1, nil => 1, "dinosaur" => 1}
 p item_counts(["a","a","A","A"]) == {"a" => 2, "A" => 2}
 
-count_and_print([1,2,1,2,1])
-count_and_print(["a","b","a","b","a","ZZZ"])
-count_and_print([])
-count_and_print(["hi", "hi", "hi"])
-count_and_print([true, nil, "dinosaur"])
-count_and_print(["a","a","A","A"])
+count_and_print( chars_in_string("a") )
+count_and_print( chars_in_string("ab") )
+count_and_print( chars_in_string("Mr.736D/f") )
+count_and_print( chars_in_string(" a b ") )
 
 # Each of the lines above will print out "true" or "false" and collectively
 # act as a sanity check.  Remember that conceptually "x == y"
